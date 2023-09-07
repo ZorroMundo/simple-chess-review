@@ -1,10 +1,17 @@
-[Event "Casual Game"]
-[White "White"]
-[Black "Black"]
-[Result "0-1"]
-[PlyCount "70"]
-[FEN "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1"]
-[Variant "Standard"]
-[Termination "mate"]
+[Event "Duesseldorf"]
+[Site "Duesseldorf"]
+[Date "1908.08.06"]
+[EventDate "?"]
+[Round "4"]
+[Result "1-0"]
+[White "Alexander Alekhine"]
+[Black "Friedrich Koehnlein"]
+[ECO "D05"]
+[WhiteElo "?"]
+[BlackElo "?"]
+[PlyCount "33"]
 
-1. e4 e5 2. Bc4 d6 3. d3 Nf6 4. Nf3 Be7 5. Nc3 O-O 6. Bg5 Ng4 7. Bxe7 Qxe7 8. O-O Nf6 9. b4 c5 10. bxc5 dxc5 11. a4 Bg4 12. Nxe5 Bxd1 13. Nxf7 Rxf7 14. Rfxd1 Nc6 15. Rac1 Ne5 16. Re1 Nxc4 17. dxc4 Ng4 18. f3 Nh6 19. Rcd1 Qg5 20. h4 Qg3 21. Rd5 Qxe1+ 22. Kh2 Qxc3 23. Rxc5 Qxc2 24. Rb5 Qxa4 25. Rxb7 Qxc4 26. Rb2 Rff8 27. Rb7 Qc6 28. Re7 Qd6+ 29. f4 Qxe7 30. g4 Nxg4+ 31. Kg3 Nf6 32. f5 Nxe4+ 33. Kf4 Nc5 34. Kg4 Qe4+ 35. Kh5 Qxf5# 0-1
+1. d4 d5 2. Nf3 e6 3. e3 Nf6 4. Bd3 Nbd7 5. Nbd2 Bd6 6. e4
+dxe4 7. Nxe4 Nxe4 8. Bxe4 O-O 9. Bg5 Qe8 10. O-O f5 11. Bd3 e5
+12. dxe5 Nxe5 13. Re1 Qh5 14. Nxe5 Qxg5 15. Bc4+ Kh8 16. Qxd6
+Qxg2 17. Kxg2 1-0

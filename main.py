@@ -33,7 +33,7 @@ def main():
         Brilliant = 7
         GreatMove = 8
 
-    def determine_color(rating) -> str:
+    def determine_color(rating: MoveRate) -> str:
         if rating is not None:
             match rating:
                 case MoveRate.BestMove:
@@ -109,7 +109,7 @@ def main():
                     rating = MoveRate.BestMove
 
         arrows = []
-        if node.uci() != engine_moves[0].uci():
+        if node.uci() != engine_moves[0].uci() and (engine_moves[0].from_square != node.move.from_square or engine_moves[0].to_square != node.move.to_square):
             arrows = [chess.svg.Arrow(engine_moves[0].from_square, engine_moves[0].to_square, color = determine_color(MoveRate.BestMove))]
         arrows.append(chess.svg.Arrow(node.move.from_square, node.move.to_square, color = determine_color(rating)))
 
@@ -144,8 +144,9 @@ def main():
             else:
                 offset = len(str(-round(_eval.score() / 100, 2))) * 6
                 draw.text((image.width - (4 + offset), 5), str(-round(_eval.score() / 100, 2)), fill = "#FFFFFF", anchor = "rm", align = "right")
-        
+
         text = node.san()
+
         match rating:
             case MoveRate.BestMove:
                 text += " is the Best Move"
