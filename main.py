@@ -16,7 +16,7 @@ def main():
     engine = chess.engine.SimpleEngine.popen_uci("stockfish_x86-64-avx2.exe")
     engine.configure({"Threads": 4})
 
-    orientation = chess.BLACK
+    orientation = chess.WHITE
     images = []
     default_board = chess.Board()
     info = engine.analyse(default_board, chess.engine.Limit(time = 1.))
