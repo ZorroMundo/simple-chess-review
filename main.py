@@ -228,7 +228,7 @@ def main():
                 text += " is a Great Move"
         
         if node.uci() != engine_moves[0].uci():
-            if rating == MoveRate.BestMove:
+            if rating == MoveRate.BestMove or rating == MoveRate.GreatMove:
                 text += ", an alternative is " + engine_move_san
             else:
                 text += ", the Best Move was " + engine_move_san
@@ -247,13 +247,8 @@ def main():
         engine_move_san = board.san(info["pv"][0])
         last_eval = info["score"]
 
-        _dict = white
-
-        if player == chess.WHITE:
-            player = chess.BLACK
-        else:
-            _dict = black
-            player = chess.WHITE
+        _dict = white if player != chess.WHITE else black
+        player = chess.BLACK if player == chess.WHITE else chess.WHITE
         
         _dict[rating] += 1
         evaluations.append(last_eval)
