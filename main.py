@@ -18,10 +18,9 @@ def main():
 
     orientation = chess.WHITE
     images = []
-    default_board = chess.Board()
-    info = engine.analyse(default_board, chess.engine.Limit(time = 1.))
+    info = engine.analyse(game.board(), chess.engine.Limit(time = 1.))
     engine_moves = info["pv"]
-    engine_move_san = default_board.san(info["pv"][0])
+    engine_move_san = game.board().san(info["pv"][0])
     last_eval = info["score"]
     player = chess.WHITE
     move = 1
