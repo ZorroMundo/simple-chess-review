@@ -120,8 +120,10 @@ def main():
 
         if not _eval.is_mate():
             if not last_eval.is_mate():
-                if node.uci() == engine_moves[0].uci() or _eval.score() >= last_eval.score():
+                if node.uci() == engine_moves[0].uci():
                     rating = MoveRate.BestMove
+                elif _eval.score() >= last_eval.score():
+                    rating = MoveRate.GreatMove
                 elif abs(_eval.score() - last_eval.score()) < 15:
                     rating = MoveRate.Excellent
                 elif abs(_eval.score() - last_eval.score()) < 50:
