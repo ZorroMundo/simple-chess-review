@@ -13,7 +13,7 @@ from PIL import ImageDraw
 def main():
 
     game = chess.pgn.read_game(open("game.pgn"))
-    engine = chess.engine.SimpleEngine.popen_uci("stockfish_x86-64-avx2.exe")
+    engine = chess.engine.SimpleEngine.popen_uci("stockfish-windows-x86-64-bmi2.exe")
     engine.configure({"Threads": 4})
 
     orientation = chess.WHITE
@@ -107,7 +107,7 @@ def main():
     evaluations = []
 
     for node in game.mainline():
-        print("Evaluating Move " + str(move))
+        print("Evaluating Move " + str((1 + move) / 2))
         move += 1
 
         board = node.board()
